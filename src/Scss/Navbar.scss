@@ -1,0 +1,83 @@
+.navbar {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3vw;
+    background-color: var(--white);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+
+    @media only screen and (min-width: 1000px) {
+        &__wrapper {
+            display: flex;
+            gap: 4rem;
+            justify-content: space-between;
+        }
+
+        &__links {
+            max-height: 100% !important;
+        }
+    }
+
+    &__wrapper {
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    &__top {
+        position: relative;
+    }
+
+    &__logo {
+        display: inline-block;
+
+        &>img {
+            width: 212px;
+            height: 32px;
+        }
+    }
+
+    &__links {
+        margin-top: 2rem;
+        margin-top: 0;
+        max-height: 0;
+        visibility: hidden;
+
+        @media only screen and (min-width: 1000px) {
+            visibility: visible;
+            display: flex;
+            gap: 4rem;
+        }
+
+        &>li>a {
+            display: inline-block;
+            height: 2rem;
+            line-height: 2rem;
+            color: var(--grey);
+            font-family: var(--text-opensans-bold);
+            font-size: 0.75rem;
+            letter-spacing: 0.2rem;
+
+            &:hover {
+                cursor: pointer;
+                color: var(--black);
+                border-bottom: solid 2px var(--main);
+            }
+        }
+    }
+
+    &__burger,
+    &__burger--on {
+        position: absolute;
+        height: 2.5rem;
+        width: 2.5rem;
+        top: 50%;
+        right: 0;
+        transform: translate(0%, -50%);
+
+        @media only screen and (min-width: 1000px) {
+            display: none;
+        }
+    }
+}

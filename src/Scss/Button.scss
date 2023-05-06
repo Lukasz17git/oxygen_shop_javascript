@@ -1,0 +1,20 @@
+.button {
+    border-radius: 100rem;
+    font-family: var(--text-opensans-bold);
+    font-size: 1rem;
+    color: var(--white);
+
+    &--main {
+        box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+        background-color: var(--main);
+    }
+
+    &--red {
+        background-color: var(--red);
+    }
+
+    &--green {
+        background-color: var(--green);
+    }
+
+}

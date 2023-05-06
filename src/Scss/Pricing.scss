@@ -1,0 +1,147 @@
+.pricing {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    &>h2 {
+        font-size: 2.5rem;
+        font-family: var(--text-raleway-regular);
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    &__cards {
+        @media only screen and (min-width: 1000px) {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+    }
+
+    &__card {
+        position: relative;
+        padding: 3rem 1rem;
+        border: solid 1px;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+
+        max-width: 30rem;
+        width: calc(100% - 2rem);
+        margin: 0 auto 5rem;
+
+        @media only screen and (min-width: 1000px) {
+            flex-direction: column;
+            justify-content: center;
+            gap: 3rem;
+            margin: 1rem auto 5rem;
+
+            &__feature {
+
+                &--on,
+                &--off {
+                    width: fit-content;
+                    margin: auto;
+                }
+            }
+
+            &--main {
+                margin: 0 auto 4rem;
+                padding: 3.5rem 2rem !important;
+            }
+        }
+
+        &--main {
+            border-color: var(--main);
+            box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+            max-width: 34rem;
+            padding: 3.5rem 1rem;
+            width: 100%;
+
+            strong {
+                color: var(--main);
+            }
+        }
+
+        &--red {
+            border-color: var(--red);
+
+            strong {
+                color: var(--red);
+            }
+        }
+
+        &--green {
+            border-color: var(--green);
+
+            strong {
+                color: var(--green);
+            }
+        }
+
+        &>.button {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            height: 3rem;
+            width: 10rem;
+        }
+
+        &>div {
+            width: 100%;
+        }
+
+        h3 {
+            font-size: 1.325rem;
+            font-family: var(--text-raleway-extrabold);
+            text-align: center;
+        }
+
+        strong {
+            display: block;
+            font-size: 3rem;
+            font-family: var(--text-opensans-light);
+            text-align: center;
+        }
+
+        q {
+            text-align: center;
+            font-family: var(--text-opensans-regular);
+            font-size: 0.8125rem;
+        }
+
+
+        &__feature {
+
+            &--on,
+            &--off {
+                font-family: var(--text-opensans-regular);
+                height: 2.5rem;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                &::before {
+                    content: '';
+                    width: 1em;
+                    height: 1em;
+                    position: relative;
+                    display: inline-block;
+                    background-size: 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            &--on::before {
+                background-image: url('/Icons/check2.svg');
+            }
+
+            &--off::before {
+                background-image: url('/Icons/cross.svg');
+            }
+
+        }
+    }
+
+}
