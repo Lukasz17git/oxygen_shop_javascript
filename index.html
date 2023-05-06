@@ -145,11 +145,17 @@
   </section>
   <section id="pricing" class="pricing">
     <h2>Pricing</h2>
+    <div class="select">
+      <select id="prices">
+        <option value="EUR">EUR</option>
+      </select>
+      <span>Currency</span>
+    </div>
     <div class="pricing__cards">
       <div class="pricing__card pricing__card--red">
         <div>
           <h3>Basic</h3>
-          <strong>$0</strong>
+          <strong id="basic-pack">€0</strong>
         </div>
         <div>
           <div class="pricing__card__feature--on">100 MB HDD</div>
@@ -163,7 +169,7 @@
       <div class="pricing__card pricing__card--main">
         <div>
           <h3>Professional</h3>
-          <strong>$25</strong>
+          <strong id="professional-pack">€25</strong>
           <q>Limited offer!</q>
         </div>
         <div>
@@ -178,7 +184,7 @@
       <div class="pricing__card pricing__card--green">
         <div>
           <h3>Premium</h3>
-          <strong>$60</strong>
+          <strong id="premium-pack">€60</strong>
           <q>Limited offer!</q>
         </div>
         <div>

@@ -15,6 +15,7 @@ import './css/Modal.css'
 import './css/Navbar.css'
 import './css/PercentageScroll.css'
 import './css/Pricing.css'
+import './css/Select.css'
 import './css/ToTop.css'
 
 /*
@@ -25,6 +26,8 @@ import { addPercentageScrollBar } from './Utils/percentageScroll'
 import { addDelayedScroll } from './Utils/delayedScroll'
 import { onSubmitFetch } from './Utils/form'
 import { showModal } from './Utils/modal'
+import { getPricesAndAddToSelect } from './Utils/getCurrency'
+import { addListenerToSelectCurrency } from './Utils/selectCurrency'
 
 addBurgerFunctionality()
 addLinksFunctionality()
@@ -37,3 +40,6 @@ addDelayedScroll('navbar-logo')
 onSubmitFetch()
 
 setTimeout(() => showModal(), 5000)
+
+getPricesAndAddToSelect()
+addListenerToSelectCurrency()
