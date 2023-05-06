@@ -14,14 +14,19 @@ import './css/Input.css'
 import './css/Navbar.css'
 import './css/PercentageScroll.css'
 import './css/Pricing.css'
+import './css/ToTop.css'
 
 /*
 SCRIPTS
 */
 import { addBurgerFunctionality, addLinksFunctionality } from './Utils/navbar'
 import { addPercentageScrollBar } from './Utils/percentageScroll'
+import { addDelayedScroll } from './Utils/delayedScroll'
 
 addBurgerFunctionality()
 addLinksFunctionality()
 
 addPercentageScrollBar()
+
+addDelayedScroll()
+addDelayedScroll('navbar-logo')
