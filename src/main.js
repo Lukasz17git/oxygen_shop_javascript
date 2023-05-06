@@ -22,6 +22,7 @@ SCRIPTS
 import { addBurgerFunctionality, addLinksFunctionality } from './Utils/navbar'
 import { addPercentageScrollBar } from './Utils/percentageScroll'
 import { addDelayedScroll } from './Utils/delayedScroll'
+import { onSubmit } from './Utils/form'
 
 addBurgerFunctionality()
 addLinksFunctionality()
@@ -30,3 +31,5 @@ addPercentageScrollBar()
 
 addDelayedScroll()
 addDelayedScroll('navbar-logo')
+
+onSubmit()

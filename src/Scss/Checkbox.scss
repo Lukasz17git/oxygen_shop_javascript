@@ -28,6 +28,16 @@
             background-size: 60%;
             background-repeat: no-repeat;
         }
+
+
+        &:invalid {
+            &+label::before {
+                content: '*';
+                display: inline;
+                position: relative;
+                color: var(--red);
+            }
+        }
     }
 
 }

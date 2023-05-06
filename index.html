@@ -16,6 +16,9 @@
 </head>
 
 <body>
+  <div id="modal">
+    
+  </div>
   <div id="percentage-scroll"></div>
   <button id="to-top">
     <img src="/Icons/to-top.svg" loading="lazy" alt="top" />
@@ -191,20 +194,20 @@
         <b>123 456 789</b>
       </div>
     </div>
-    <form class="faq__form">
+    <form class="faq__form" id="form">
       <div class="input">
         <label for="name">NAME</label>
-        <input type="text" id="name" />
+        <input name="name" type="text" id="name" required minlength="2" maxlength="100" />
       </div>
       <div class="input">
         <label for="email"> EMAIL</label>
-        <input type="email" id="email" />
+        <input name="email" type="email" id="email" required />
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="tos" />
+        <input name="tos" type="checkbox" id="tos" required />
         <label for="tos">
           I hereby give consent for my personal data included in my application to be processed for the purposes of the
-          recruitment process under the European Parliament’s and Council of the European Union Regulation on the
+          recruitment process under the European Parliament's and Council of the European Union Regulation on the
           Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the
           free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
         </label>
