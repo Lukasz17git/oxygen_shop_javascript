@@ -12,12 +12,16 @@ import './css/Footer.css'
 import './css/Hero.css'
 import './css/Input.css'
 import './css/Navbar.css'
+import './css/PercentageScroll.css'
 import './css/Pricing.css'
 
 /*
 SCRIPTS
 */
 import { addBurgerFunctionality, addLinksFunctionality } from './Utils/navbar'
+import { addPercentageScrollBar } from './Utils/percentageScroll'
 
 addBurgerFunctionality()
 addLinksFunctionality()
+
+addPercentageScrollBar()

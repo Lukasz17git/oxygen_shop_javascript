@@ -1,0 +1,9 @@
+#percentage-scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 0.25rem;
+    z-index: 100;
+    width: 0px;
+    background-color: var(--main);
+}
