@@ -2,8 +2,8 @@
 const formID = "form"
 const uri = "https://jsonplaceholder.typicode.com/posts"
 
-export const onSubmit = () => {
-    const form = document.getElementById(formID)
+export const onSubmitFetch = (id = formID, callback) => {
+    const form = document.getElementById(id)
     form.addEventListener('submit', (e) => {
 
         e.preventDefault()
@@ -18,6 +18,9 @@ export const onSubmit = () => {
             headers: { 'Content-type': 'application/json; charset=UTF-8' }
         })
             .then(r => r.json())
-            .then(json => console.log(json))
+            .then(json => {
+                alert('sent successfully to the server')
+                if (callback) callback()
+            })
     })
 }

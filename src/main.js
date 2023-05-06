@@ -11,6 +11,7 @@ import './css/Faq.css'
 import './css/Footer.css'
 import './css/Hero.css'
 import './css/Input.css'
+import './css/Modal.css'
 import './css/Navbar.css'
 import './css/PercentageScroll.css'
 import './css/Pricing.css'
@@ -22,7 +23,8 @@ SCRIPTS
 import { addBurgerFunctionality, addLinksFunctionality } from './Utils/navbar'
 import { addPercentageScrollBar } from './Utils/percentageScroll'
 import { addDelayedScroll } from './Utils/delayedScroll'
-import { onSubmit } from './Utils/form'
+import { onSubmitFetch } from './Utils/form'
+import { showModal } from './Utils/modal'
 
 addBurgerFunctionality()
 addLinksFunctionality()
@@ -32,4 +34,6 @@ addPercentageScrollBar()
 addDelayedScroll()
 addDelayedScroll('navbar-logo')
 
-onSubmit()
+onSubmitFetch()
+
+setTimeout(() => showModal(), 5000)

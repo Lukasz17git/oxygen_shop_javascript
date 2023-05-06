@@ -16,9 +16,21 @@
 </head>
 
 <body>
-  <div id="modal">
-    
-  </div>
+  <dialog class="modal">
+    <div class="modal__header">
+      <h3>Subscribe to our newsletter!</h3>
+      <button id="close-modal">
+        <img src="/Icons/close.svg" alt="close" loading="lazy" />
+      </button>
+    </div>
+    <form class="modal__form" id="form-newsletter">
+      <div class="input">
+        <label for="email"> EMAIL</label>
+        <input autofocus name="email" type="email" id="email" required />
+      </div>
+      <input class="button button--main" type="submit" value="Send" />
+    </form>
+  </dialog>
   <div id="percentage-scroll"></div>
   <button id="to-top">
     <img src="/Icons/to-top.svg" loading="lazy" alt="top" />
