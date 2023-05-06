@@ -13,3 +13,11 @@ import './css/Hero.css'
 import './css/Input.css'
 import './css/Navbar.css'
 import './css/Pricing.css'
+
+/*
+SCRIPTS
+*/
+import { addBurgerFunctionality, addLinksFunctionality } from './Utils/navbar'
+
+addBurgerFunctionality()
+addLinksFunctionality()

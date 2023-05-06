@@ -39,15 +39,30 @@
     }
 
     &__links {
-        margin-top: 2rem;
-        margin-top: 0;
         max-height: 0;
-        visibility: hidden;
+        overflow: hidden;
 
         @media only screen and (min-width: 1000px) {
             visibility: visible;
             display: flex;
             gap: 4rem;
+
+            &>li {
+                visibility: visible !important;
+            }
+
+            &>li:first-child {
+                padding-top: 0 !important;
+            }
+        }
+
+        &>li {
+            visibility: hidden;
+            transition: visibility 0s 0.25s;
+
+            &:first-child {
+                padding-top: 2rem;
+            }
         }
 
         &>li>a {
@@ -78,6 +93,18 @@
 
         @media only screen and (min-width: 1000px) {
             display: none;
+        }
+    }
+}
+
+.navbar__wrapper--on {
+    .navbar__links {
+        max-height: 50vh;
+        transition: max-height 0.5s;
+
+        &>li {
+            visibility: visible;
+            transition-delay: 0s;
         }
     }
 }
