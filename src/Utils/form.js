@@ -19,7 +19,7 @@ export const onSubmitFetch = (id = formID, callback) => {
         })
             .then(r => r.json())
             .then(json => {
-                alert('sent successfully to the server')
+                alert('Sent Successfully!')
                 if (callback) callback()
             })
     })

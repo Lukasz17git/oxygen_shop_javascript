@@ -1,5 +1,4 @@
-.navbar__burger,
-.navbar__burger--on {
+.navbar__burger {
     svg {
         --stroke-color: var(--main);
         --size: 16%;
@@ -37,18 +36,21 @@
     }
 }
 
-.navbar__burger--on svg {
-    transform: rotate(45deg);
+.navbar__wrapper--on {
+    .navbar__burger svg {
+        transform: rotate(45deg);
 
-    .top {
-        stroke-dashoffset: -64px;
+        .top {
+            stroke-dashoffset: -64px;
+        }
+
+        .middle {
+            transform: rotate(90deg);
+        }
+
+        .bottom {
+            stroke-dashoffset: -64px;
+        }
     }
 
-    .middle {
-        transform: rotate(90deg);
-    }
-
-    .bottom {
-        stroke-dashoffset: -64px;
-    }
 }

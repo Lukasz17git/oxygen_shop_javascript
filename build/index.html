@@ -13,18 +13,37 @@
   <meta name="description"
     content="Comienza tu negocio en línea con la plataforma líder en el sector. Oxygen Shop te ofrece las mejores herramientas para crear y administrar tu tienda en línea de manera fácil y efectiva. ¡Visítanos hoy y descubre todo lo que podemos ofrecerte!">
   <title>Oxygen Shop</title>
-  <script type="module" crossorigin src="/assets/index-f48eb2ad.js"></script>
-  <link rel="stylesheet" href="/assets/index-ae224e81.css">
+  <script type="module" crossorigin src="/assets/index-0af84ed0.js"></script>
+  <link rel="stylesheet" href="/assets/index-047c61e1.css">
 </head>
 
 <body>
+  <dialog class="modal">
+    <div class="modal__header">
+      <h3>Subscribe to our newsletter!</h3>
+      <button id="close-modal">
+        <img src="/Icons/close.svg" alt="close" loading="lazy" />
+      </button>
+    </div>
+    <form class="modal__form" id="form-newsletter">
+      <div class="input">
+        <label for="email"> EMAIL</label>
+        <input autofocus name="email" type="email" id="email" required />
+      </div>
+      <input class="button button--main" type="submit" value="Send" />
+    </form>
+  </dialog>
+  <div id="percentage-scroll"></div>
+  <button id="to-top">
+    <img src="/Icons/to-top.svg" loading="lazy" alt="top" />
+  </button>
   <nav class="navbar">
-    <div class="navbar__wrapper">
+    <div class="navbar__wrapper" id="navbar__wrapper">
       <div class="navbar__top">
-        <a href="#hero" class="navbar__logo">
+        <button class="navbar__logo" id="navbar-logo">
           <img src="/Icons/logo.svg" loading="lazy" alt="logo" />
-        </a>
-        <button class="navbar__burger">
+        </button>
+        <button class="navbar__burger" id="burger">
           <svg width="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
             <path d="M30 33h40c3.723 0 7.5 3.126 7.5 8.578S74.773 50 70 50H50" class="line top" />
             <path d="M30 50h40" class="line middle" />
@@ -128,11 +147,17 @@
   </section>
   <section id="pricing" class="pricing">
     <h2>Pricing</h2>
+    <div class="select">
+      <select id="prices">
+        <option value="EUR">EUR</option>
+      </select>
+      <span>Currency</span>
+    </div>
     <div class="pricing__cards">
       <div class="pricing__card pricing__card--red">
         <div>
           <h3>Basic</h3>
-          <strong>$0</strong>
+          <strong id="basic-pack">€0</strong>
         </div>
         <div>
           <div class="pricing__card__feature--on">100 MB HDD</div>
@@ -146,7 +171,7 @@
       <div class="pricing__card pricing__card--main">
         <div>
           <h3>Professional</h3>
-          <strong>$25</strong>
+          <strong id="professional-pack">€25</strong>
           <q>Limited offer!</q>
         </div>
         <div>
@@ -161,7 +186,7 @@
       <div class="pricing__card pricing__card--green">
         <div>
           <h3>Premium</h3>
-          <strong>$60</strong>
+          <strong id="premium-pack">€60</strong>
           <q>Limited offer!</q>
         </div>
         <div>
@@ -176,6 +201,18 @@
 
     </div>
   </section>
+  <div id="slider">
+    <img src="/Images/image1.jpg" srcset="/Images/image1.jpg 1000w, /Images/image1-mobile.jpg 400w" loading="lazy"
+      alt="example" />
+    <img src="/Images/image2.jpg" srcset="/Images/image2.jpg 1000w, /Images/image2-mobile.jpg 400w" loading="lazy"
+      alt="example" />
+    <img src="/Images/image3.jpg" srcset="/Images/image3.jpg 1000w, /Images/image3-mobile.jpg 400w" loading="lazy"
+      alt="example" />
+    <img src="/Images/image4.jpg" srcset="/Images/image4.jpg 1000w, /Images/image4-mobile.jpg 400w" loading="lazy"
+      alt="example" />
+    <img src="/Images/image5.jpg" srcset="/Images/image5.jpg 1000w, /Images/image5-mobile.jpg 400w" loading="lazy"
+      alt="example" />
+  </div>
   <section id="faq" class="faq">
     <div class="faq__info">
       <h2>Any questions?</h2>
@@ -189,20 +226,20 @@
         <b>123 456 789</b>
       </div>
     </div>
-    <form class="faq__form">
+    <form class="faq__form" id="form">
       <div class="input">
         <label for="name">NAME</label>
-        <input type="text" id="name" />
+        <input name="name" type="text" id="name" required minlength="2" maxlength="100" />
       </div>
       <div class="input">
         <label for="email"> EMAIL</label>
-        <input type="email" id="email" />
+        <input name="email" type="email" id="email" required />
       </div>
       <div class="checkbox">
-        <input type="checkbox" id="tos" />
+        <input name="tos" type="checkbox" id="tos" required />
         <label for="tos">
           I hereby give consent for my personal data included in my application to be processed for the purposes of the
-          recruitment process under the European Parliament’s and Council of the European Union Regulation on the
+          recruitment process under the European Parliament's and Council of the European Union Regulation on the
           Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the
           free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
         </label>

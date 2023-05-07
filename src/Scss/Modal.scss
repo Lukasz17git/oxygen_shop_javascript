@@ -45,11 +45,12 @@
 
 
         &>.input {
+            width: 100%;
+            max-width: 24rem;
             margin: 1rem auto 2.5rem;
 
             &>input {
-                width: 24rem;
-                max-width: 100%;
+                width: 100%;
             }
         }
 
