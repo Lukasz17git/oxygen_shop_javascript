@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [viteCompression()],
   build: {
     assetsInlineLimit: 0,
-    outDir: './build',
+    // outDir: './build',
   }
 })
