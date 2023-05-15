@@ -1,56 +1,56 @@
 .navbar__burger {
-    svg {
-        --stroke-color: var(--main);
-        --size: 16%;
-        position: absolute;
-        width: calc(100% + var(--size) + var(--size));
-        height: calc(100% + var(--size) + var(--size));
-        left: calc(-1 * var(--size));
-        top: calc(-1 * var(--size));
-        transition: transform 400ms;
-        user-select: none;
+   svg {
+      --stroke-color: var(--main);
+      --size: 16%;
+      position: absolute;
+      width: calc(100% + var(--size) + var(--size));
+      height: calc(100% + var(--size) + var(--size));
+      left: calc(-1 * var(--size));
+      top: calc(-1 * var(--size));
+      transition: transform 400ms;
+      user-select: none;
 
-        .line {
-            fill: none;
-            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-            stroke: var(--stroke-color);
-            stroke-width: 6;
-            stroke-linecap: round;
-        }
+      .line {
+         fill: none;
+         transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+         stroke: var(--stroke-color);
+         stroke-width: 6;
+         stroke-linecap: round;
+      }
 
-        .top {
-            stroke-dasharray: 40 160;
-        }
+      .top {
+         stroke-dasharray: 40 160;
+      }
 
-        .middle {
-            stroke-dasharray: 40 142;
-            transform-origin: 50%;
-            transition: transform 400ms;
-        }
+      .middle {
+         stroke-dasharray: 40 142;
+         transform-origin: 50%;
+         transition: transform 400ms;
+      }
 
-        .bottom {
-            stroke-dasharray: 40 85;
-            transform-origin: 50%;
-            transition: transform 400ms, stroke-dashoffset 400ms;
-        }
-    }
+      .bottom {
+         stroke-dasharray: 40 85;
+         transform-origin: 50%;
+         transition: transform 400ms, stroke-dashoffset 400ms;
+      }
+   }
 }
 
 .navbar__wrapper--on {
-    .navbar__burger svg {
-        transform: rotate(45deg);
+   .navbar__burger svg {
+      transform: rotate(45deg);
 
-        .top {
-            stroke-dashoffset: -64px;
-        }
+      .top {
+         stroke-dashoffset: -64px;
+      }
 
-        .middle {
-            transform: rotate(90deg);
-        }
+      .middle {
+         transform: rotate(90deg);
+      }
 
-        .bottom {
-            stroke-dashoffset: -64px;
-        }
-    }
+      .bottom {
+         stroke-dashoffset: -64px;
+      }
+   }
 
 }
